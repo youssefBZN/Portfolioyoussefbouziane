@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://127.0.0.1:8000/show/40 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="OJAwsj6u6kw04l1g96PAbXaxb7Hf6kdz32zbuEYp">
+
+        <title>Laravel</title>
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./Laravel_files/css2">
+
+        <!-- Scripts -->
+        <link href="./Laravel_files/app.css" rel="stylesheet">
+<script src="./Laravel_files/app.js" defer=""></script>
+
+    </head>
+    <body class="font-sans antialiased" cz-shortcut-listen="true">
+        <div class="min-h-screen bg-gray-100">
+            <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+    <!-- Primary Navigation Menu -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex">
+                <!-- Logo -->
+                <div class="shrink-0 flex items-center">
+                    <a href="http://127.0.0.1:8000/dashboard">
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <a class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out" href="http://127.0.0.1:8000/dashboard">
+    Dashboard
+</a>
+                    <a class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out" href="http://127.0.0.1:8000/create">
+    Ajouter Blog
+</a>
+                </div>
+                
+                  
+
+            </div>
+
+            <!-- Settings Dropdown -->
+            <div class="hidden sm:flex sm:items-center sm:ml-6">
+                                <div class="relative" x-data="{ open: false }" @click.outside="open = false" @close.stop="open = false">
+    <div @click="open = ! open">
+        <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                            <div>Taha</div>
+
+                            <img class="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg"> 
+                  
+
+                            <div class="ml-1">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </button>
+    </div>
+
+    <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute z-50 mt-2 w-48 rounded-md shadow-lg origin-top-right right-0" style="display: none;" @click="open = false">
+        <div class="rounded-md ring-1 ring-black ring-opacity-5 py-1 bg-white">
+            <!-- Authentication -->
+                        <form method="POST" action="http://127.0.0.1:8000/logout">
+                            <input type="hidden" name="_token" value="OJAwsj6u6kw04l1g96PAbXaxb7Hf6kdz32zbuEYp">
+                            <a class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" href="http://127.0.0.1:8000/logout" onclick="event.preventDefault();
+                                                this.closest(&#39;form&#39;).submit();">Log Out</a>
+                            <a class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" href="http://127.0.0.1:8000/Profil">Profil</a>
+                        </form>
+        </div>
+    </div>
+</div>
+                 
+                 
+                    
+
+
+
+
+
+
+
+            </div>
+
+            <!-- Hamburger -->
+            <div class="-mr-2 flex items-center sm:hidden">
+                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
+                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                        <path :class="{&#39;hidden&#39;: open, &#39;inline-flex&#39;: ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path :class="{&#39;hidden&#39;: ! open, &#39;inline-flex&#39;: open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Responsive Navigation Menu -->
+    <div :class="{&#39;block&#39;: open, &#39;hidden&#39;: ! open}" class="hidden sm:hidden">
+        <div class="pt-2 pb-3 space-y-1">
+            <a class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out" href="http://127.0.0.1:8000/dashboard">
+    Dashboard
+</a>
+        </div>
+
+        <!-- Responsive Settings Options -->
+                <div class="pt-4 pb-1 border-t border-gray-200">
+            <div class="px-4">
+                <div class="font-medium text-base text-gray-800">Taha</div>
+                <div class="font-medium text-sm text-gray-500">Taha-bouziane@gmail.com</div>
+            </div>
+
+            <div class="mt-3 space-y-1">
+                <!-- Authentication -->
+                <form method="POST" action="http://127.0.0.1:8000/logout">
+                    <input type="hidden" name="_token" value="OJAwsj6u6kw04l1g96PAbXaxb7Hf6kdz32zbuEYp">
+                    <a class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out" href="http://127.0.0.1:8000/logout" onclick="event.preventDefault();
+                                        this.closest(&#39;form&#39;).submit();">
+    Log Out
+</a>
+                </form>
+            </div>
+        </div>
+            </div>
+</nav>
+
+            <!-- Page Heading -->
+            <header class="bg-white shadow">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            Blogs
+        </h2>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <main>
+                <div class="d-flex flex-column">
+<div class="mt-6">
+    <div class="max-w-4xl px-10 py-6 mx-auto bg-white rounded-lg shadow-md">
+        <div class="flex items-center justify-between"><span class="font-light text-gray-600">
+            15 Jun 2023
+        </span>
+        </div>
+        <div><a href="http://127.0.0.1:8000/show/40#" class="flex items-center"><img src="./Laravel_files/Hf58tovkZ9j3zy5hS9XAj4HuD80PsdwRRlbsbnnU.jpg" class="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block">
+                              <h1 class="font-bold text-gray-700 hover:underline">abderahim Bouziane</h1>
+                             </a><div><a href="http://127.0.0.1:8000/show/40#" class="flex items-center">
+        </a><div class="mt-2"><a href="http://127.0.0.1:8000/show/40#" class="flex items-center"></a><a href="http://127.0.0.1:8000/show/40#" class="text-2xl font-bold text-gray-700 hover:underline">parlement marocaine</a>
+        <p class="mt-2 text-gray-600">Le régime représentatif traditionnel au Maroc s'exprimait à travers des structures ancestrales telle que l'assemblée des ouléma par villes et par région, ou encore les assemblées des Jemâa au sein même des tribus. Ces structures n'étaient pas élues, mais pourvues à travers un système de cooptation.À partir des années 1880, le Maroc commence une série de réformes visant à le doter d'institutions répondant aux normes modernes, notamment occidentales. Il en est ainsi de la création d'un poste de grand vizir, ayant un cabinet ministériel structuré et pérenne, avec six ministères, dont les affaires étrangères, les finances, la défense, etc. Dans la foulée, le sultan Moulay Abdelaziz décide de créer en 1904 une assemblée consultative, nommé Majliss el Aayane 5 C'est à l'initiative de cette assemblée qu'a été convoquée la conférence internationale d'Algesiras, et qu'a été rédigée la constitution de 1908, qui n'entrera jamais en vigueur, en raison des troubles.</p>
+        </div>
+        <div class="flex items-center justify-between mt-4">
+  
+        
+                      
+                   <img style="width: 1000px;" src="./Laravel_files/q7gfyxdQDQzcpH3r2uMeCMmPVQ952rgFCsl6WaR5.jpg">
+                
+                  </div>
+
+           
+<section class="bg-white dark:bg-gray-900 py-8 lg:py-16">
+  <div class="max-w-2xl mx-auto px-4">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white">Discussion (20)</h2>
+    </div>
+    <form action="http://127.0.0.1:8000/Comment/40" method="POST" class="mb-6" enctype="multipart/form-data">       
+    <input type="hidden" name="_token" value="OJAwsj6u6kw04l1g96PAbXaxb7Hf6kdz32zbuEYp">        <div class="py-2 px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+            <label for="contenu" class="sr-only">Your comment</label>
+            <textarea id="contenu" rows="6" class="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none dark:text-white dark:placeholder-gray-400 dark:bg-gray-800" placeholder="Write a comment..." name="contenu"></textarea>
+                <label class="block font-medium text-sm text-gray-700" for="image">
+    Image du post
+</label>
+           <input class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" type="file" id="image" name="image">
+        </div>
+             
+        
+        <button type="submit" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150 mt-5" style="display: block !important;">
+    Post mon commentaire
+</button>
+
+
+
+
+
+    </form>
+       
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/Hf58tovkZ9j3zy5hS9XAj4HuD80PsdwRRlbsbnnU.jpg" alt="Helene Engels"> abderahim Bouziane </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 15 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">Qui eveniet tempora aut.</p>
+        <img src="./Laravel_files/1000">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/Hf58tovkZ9j3zy5hS9XAj4HuD80PsdwRRlbsbnnU.jpg" alt="Helene Engels"> abderahim Bouziane </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 15 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">Quo vel maxime et.</p>
+        <img src="./Laravel_files/1000">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">it s nice</p>
+        <img src="./Laravel_files/JTTOKUH2aPhZpV0aLrEfXkYrO8Mjmsj815sZvqSY.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">i hope that he work</p>
+        <img src="./Laravel_files/9YpPE418aWUkqUo4u8nZGK51lNxehmQFpkk9N8rT.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">i hope that he work</p>
+        <img src="./Laravel_files/LGNQ3XSCLdOcG0eaermSPzZw2q7H0B4S2GSQUQYC.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">i hope that he work</p>
+        <img src="./Laravel_files/soKbJeij5ARMEygEeA8zfqo0EcN3qSffkZWgtZDM.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">i hope that he work</p>
+        <img src="./Laravel_files/HYzh9ffbDQPhdFnUwkrzpOQBedCCNsVh2unB1kRq.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">commentaire</p>
+        <img src="./Laravel_files/G3eCKFu7Nes8A348PnBWGmEbiwSIXto7CdDoFPj4.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">yarab</p>
+        <img src="./Laravel_files/OdElzJx15FnHhh6AIRJarPQEnn8W24IVOL1t1DUA.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">yarab y5dm</p>
+        <img src="./Laravel_files/1nQBi3I2iM3Jo1FPIJJbvDQ1Sdqfpfefbpk75Zos.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">yarab y5dm</p>
+        <img src="./Laravel_files/TVFti36qp5weMGUub9Y64mZqBLLyHh6XuhmMVYwl.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">yarab y5dm</p>
+        <img src="./Laravel_files/fX8W7AuHW7ED9DUpZ9DIOyMejRFJEea1SqL18LoC.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">yarab y5dm</p>
+        <img src="./Laravel_files/HY3BNLiVNJ3ygYrxJfVnZQd7lRGstJROFgTZrX8K.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">yarab y5dm</p>
+        <img src="./Laravel_files/1Kd8VigGWGOs3LdFN2URNdawn9W6qyH6CAUtS6Re.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">parlement</p>
+        <img src="./Laravel_files/Edza0Akm1Pn09dtAOpY72FCkOIxOmcSFmS5wRO25.webp">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">its not working</p>
+        <img src="./Laravel_files/KeZbhAsixkfoCu5lPlHh5UoXCNA9BCWQmlHY1kxS.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">its not working</p>
+        <img src="./Laravel_files/jQZc2L2Sgw1vjehqdnzCjQrqgwJD9nM3LKUQPm4r.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">its not workingeeeeee</p>
+        <img src="./Laravel_files/rDl3BszLD62uDepuM73yACee3IHl5qjYCYf2FFGC.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">alahu akbarooo</p>
+        <img src="./Laravel_files/DD3tiCaQx78F3rXAzIwuX118ueXvJXuOOoq3uld4.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">alahu akbarooo</p>
+        <img src="./Laravel_files/7Z0A8CwXttPTC4QwsUS4qu7OyRdVwJFkCrRIQd7Q.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">alahu akbarooo</p>
+        <img src="./Laravel_files/2p4gShP50ObvGru3SL9NmoWCxfn71As52HGuIe0R.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">alahu akbarooon</p>
+        <img src="./Laravel_files/fIduXrKxLzqWAdIVdh0qJrvuFQNGQsjRRT0OG20T.png">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">iwich</p>
+        <img src="./Laravel_files/n0MxOJkt5LVGPYJrLBHG7YPMyveHHDRa5OBrXqEM.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">iwich</p>
+        <img src="./Laravel_files/8azQNdjn5sMy4SpSqDXKQx20Fmyh53eQhOYJ5ZUg.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">iwich</p>
+        <img src="./Laravel_files/SEXfiAFEUVQkZfngruvtJfprcseiRZYSuH961Xhz.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+     
+
+    <article class="p-6 text-base bg-white border-t border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+        <footer class="flex justify-between items-center mb-2">
+            <div class="flex items-center">
+                <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img class="mr-2 w-6 h-6 rounded-full" src="./Laravel_files/3DIvKTCLqiqsp9XxvU9ApfmSqyAA6YLSNi6pspKD.jpg" alt="Helene Engels"> Taha </p>
+                <p style="margin-left: 10px;" class="text-sm text-gray-600 dark:text-gray-400"><time pubdate="" datetime="2022-06-23" title="June 23rd, 2022"> 21 Jun 2023 </time></p>
+            </div>
+            <button id="dropdownComment4Button" data-dropdown-toggle="dropdownComment4" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-400 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button">
+                <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownComment4" class="hidden z-10 w-36 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownMenuIconHorizontalButton">
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Remove</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:8000/show/40#" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <p class="text-gray-500 dark:text-gray-400">iwich</p>
+        <img src="./Laravel_files/WxWQTwBmlg3yr0jHRZZELMGjxFr7SDMJHd6vte4a.jpg">
+        <div class="flex items-center mt-4 space-x-4">
+            <button type="button" class="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400">
+                <svg aria-hidden="true" class="mr-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                Reply
+            </button>
+        </div>
+    </article>
+      </div>
+</section>
+
+                        
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+        
+        
+
+  <div>
+      
+
+    
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+    <footer class="px-6 py-2 text-gray-100 bg-gray-800">
+        <div class="container flex flex-col items-center justify-between mx-auto md:flex-row"><a href="http://127.0.0.1:8000/show/40#" class="text-2xl font-bold">Brand</a>
+            <p class="mt-2 md:mt-0">All rights reserved 2020.</p>
+            <div class="flex mt-4 mb-2 -mx-2 md:mt-0 md:mb-0"><a href="http://127.0.0.1:8000/show/40#" class="mx-2 text-gray-100 hover:text-gray-400"><svg viewBox="0 0 512 512" class="w-4 h-4 fill-current">
+                    <path d="M444.17,32H70.28C49.85,32,32,46.7,32,66.89V441.61C32,461.91,49.85,480,70.28,480H444.06C464.6,480,480,461.79,480,441.61V66.89C480.12,46.7,464.6,32,444.17,32ZM170.87,405.43H106.69V205.88h64.18ZM141,175.54h-.46c-20.54,0-33.84-15.29-33.84-34.43,0-19.49,13.65-34.42,34.65-34.42s33.85,14.82,34.31,34.42C175.65,160.25,162.35,175.54,141,175.54ZM405.43,405.43H341.25V296.32c0-26.14-9.34-44-32.56-44-17.74,0-28.24,12-32.91,23.69-1.75,4.2-2.22,9.92-2.22,15.76V405.43H209.38V205.88h64.18v27.77c9.34-13.3,23.93-32.44,57.88-32.44,42.13,0,74,27.77,74,87.64Z">
+                    </path>
+                </svg></a><a href="http://127.0.0.1:8000/show/40#" class="mx-2 text-gray-100 hover:text-gray-400"><svg viewBox="0 0 512 512" class="w-4 h-4 fill-current">
+                    <path d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z">
+                    </path>
+                </svg></a><a href="http://127.0.0.1:8000/show/40#" class="mx-2 text-gray-100 hover:text-gray-400"><svg viewBox="0 0 512 512" class="w-4 h-4 fill-current">
+                    <path d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z">
+                    </path>
+                </svg></a>
+            </div>
+        </div>
+    </footer>
+</main></div>
+
+
+           
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+   <p>25</p>
+
+
+   <p>40</p>
+
+
+   <p>223</p>
+
+
+   <p>224</p>
+
+
+   <p>225</p>
+
+
+   <p>226</p>
+
+
+   <p>227</p>
+
+
+   <p>228</p>
+
+
+   <p>229</p>
+
+
+   <p>230</p>
+
+
+   <p>231</p>
+
+
+   <p>232</p>
+
+
+   <p>233</p>
+
+
+   <p>234</p>
+
+
+   <p>235</p>
+
+
+   <p>236</p>
+
+
+   <p>237</p>
+
+
+   <p>238</p>
+
+
+   <p>239</p>
+
+
+   <p>240</p>
+
+
+   <p>241</p>
+
+
+   <p>242</p>
+
+
+   <p>243</p>
+
+
+   <p>244</p>
+
+
+   <p>245</p>
+
+
+   <p>246</p>
+
+ -->
+
+
+
+
+
+
+
+
+
+40
+            
+        
+    
+
+</body></html>
